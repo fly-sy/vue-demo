@@ -1,6 +1,7 @@
 <template>
   <div class="home">
     <!-- 轮播图 -->
+    
     <div style="width: 375px; overflow: hidden">
       <van-swipe
         :autoplay="3000"
