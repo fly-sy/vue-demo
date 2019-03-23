@@ -5,6 +5,7 @@
       left-text="返回"
       left-arrow
       fixed
+      :z-index=999
     />
 
     <!-- <transition>

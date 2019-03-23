@@ -6,6 +6,8 @@ import Cart from '../components/tabbar/Cart'
 import Search from '../components/tabbar/Search'
 import NewsList from '../components/news/NewsList'
 import NewsInfo from '../components/news/NewsInfo'
+import PhotoList from '../components/photos/PhotoList'
+import PhotoInfo from '../components/photos/PhotoInfo'
 
 Vue.use(Router)
 
@@ -38,6 +40,14 @@ export default new Router({
     {
       path: '/home/newsinfo/:id',
       component: NewsInfo
+    },
+    {
+      path: '/home/photolist',
+      component: PhotoList
+    },
+    {
+      path: '/home/photoinfo/:id',
+      component: PhotoInfo
     },
   ]
 })

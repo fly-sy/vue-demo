@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import { NavBar ,Tabbar, TabbarItem, Swipe, SwipeItem,Card ,Button} from 'vant'
+import { NavBar ,Tabbar, TabbarItem, Swipe, SwipeItem,Card ,Button,Tab, Tabs,Lazyload  } from 'vant'
 
 Vue.use(NavBar)
    .use(Tabbar)
@@ -13,11 +13,14 @@ Vue.use(NavBar)
    .use(SwipeItem)
    .use(Card)
    .use(Button)
+   .use(Tab)
+   .use(Tabs)
+   .use(Lazyload)
 
 
 // import VueResource from 'vue-resource'
 // Vue.use(VueResource)
-// 设置全局根路径
+// //设置全局根路径
 // Vue.http.options.root = "http://127.0.0.1:5000/"
 // Vue.http.options.emulateJSON = true  
 
