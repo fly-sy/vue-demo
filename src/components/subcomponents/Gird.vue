@@ -1,16 +1,18 @@
 <template>
   <div class="gird">
     <div class="demo-icon">
-      <div
+      <router-link 
+        tag="div"
         class="van-col van-col--6"
         v-for="item in girds"
         :key="item.id"
+        :to="item.to"
       >
         <i class="van-icon">
           <img :src="item.src" />
         </i>
         <span>{{item.title}}</span>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>

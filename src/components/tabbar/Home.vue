@@ -35,17 +35,27 @@ export default {
     this.getlunbo();
   },
   methods: {
-    getlunbo() {
-      this.$http.get("api/getlunbo").then(result => {
-        const {
-          data: { status, message }
-        } = result;
-        if (status === 0) {
-          this.lunbotulist = message;
-        } else {
-          Toast("获取轮播图数据失败");
-        }
-      });
+    
+    // getlunbo() {
+    //   this.$http.get("api/getlunbo").then(result => {
+    //     const {
+    //       data: { status, message }
+    //     } = result;
+    //     if (status === 0) {
+    //       this.lunbotulist = message;
+    //     } else {
+    //       Toast("获取轮播图数据失败");
+    //     }
+    //   });
+    // }
+
+    async getlunbo() {
+      const {data: { status, message }} = await this.$http.get("api/getlunbo")
+      if (status === 0) {
+        this.lunbotulist = message
+      } else {
+        Toast("获取轮播图数据失败")
+      }
     }
   },
   components: {

@@ -47,6 +47,7 @@ export default {
 
 <style lang="less">
 .app {
+  padding-bottom: 50px;
   padding-top: 46px;
   overflow-x: hidden;
   .v-leave-to {

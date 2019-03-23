@@ -4,13 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-import { NavBar ,Tabbar, TabbarItem, Swipe, SwipeItem} from 'vant'
+import { NavBar ,Tabbar, TabbarItem, Swipe, SwipeItem,Card ,Button} from 'vant'
 
 Vue.use(NavBar)
    .use(Tabbar)
    .use(TabbarItem)
    .use(Swipe)
    .use(SwipeItem)
+   .use(Card)
+   .use(Button)
 
 
 // import VueResource from 'vue-resource'
@@ -28,6 +30,13 @@ axios.defaults.baseURL = "http://127.0.0.1:5000/"
 
 // 引入animate.css 
 import 'animate.css/animate.css'
+
+
+import moment from 'moment'
+// 定义全局事件过滤器
+Vue.filter('datefmt',function(date,str="YYYY-MM-DD hh:mm:ss"){
+  return moment(date).format(str)
+})
 
 Vue.config.productionTip = false
 
